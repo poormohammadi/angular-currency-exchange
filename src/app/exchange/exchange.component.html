@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="exchange">
+    <div class="box">
+      <app-exchange-currency-row
+        type="withdraw"
+        [balance]="withdrawalBalance"
+        [amount]="withdrawalAmount"
+        (amountChange)="onWidrawalAmountChange($event)"
+        [selectedCurrency]="withdrawalCurrency"
+        (selectedCurrencyChange)="onWithdrawalCurrencyChange($event)"
+        [error]="withdrawalError"
+        [disabled]="isLoading"
+        >
+      </app-exchange-currency-row>
+
+      <app-exchange-rate
+        [withdrawalCurency]="withdrawalCurrency"
+        [depositCurrency]="depositCurrency"
+        [exchangeRate]="exchangeRate"
+        [isLoading]="isLoading"
+        [error]="exchangeRateError"
+      >
+      </app-exchange-rate>
+
+      <app-exchange-currency-row
+        type="deposit"
+        [balance]="depositBalance"
+        [amount]="depositAmount"
+        (amountChange)="onDepositAmountChange($event)"
+        [selectedCurrency]="depositCurrency"
+        (selectedCurrencyChange)="onDepositCurrencyChange($event)"
+        [disabled]="isLoading"
+        >
+      </app-exchange-currency-row>
+    </div>
+
+    <button
+      class="button"
+      [disabled]="!!withdrawalError || isLoading"
+      (click)="doExchange()">
+      Exchange
+    </button>
+  </div>
+</div>
+

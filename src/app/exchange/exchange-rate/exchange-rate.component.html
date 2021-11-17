@@ -1,0 +1,9 @@
+<div class="row">
+  <span class="text" [ngClass]="{'error': error}">
+    <ng-container *ngIf="isLoading">Loading...</ng-container>
+    <ng-container *ngIf="!isLoading && error">{{error}}</ng-container>
+    <ng-container *ngIf="!error && !isLoading">
+      {{withdrawalCurency?.symbol}}1 = {{depositCurrency?.symbol}}{{exchangeRate}}
+    </ng-container>
+  </span>
+</div>

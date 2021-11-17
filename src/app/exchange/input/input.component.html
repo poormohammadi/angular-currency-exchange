@@ -1,0 +1,6 @@
+<div class="input-box">
+  <span class="sign">{{type === 'withdraw' ? '-' : '+'}}</span>
+  <input type="number" step ="0.01" [disabled]="!!disabled" class="input" [ngModel]="value" (ngModelChange)="onValeChange($event)" />
+</div>
+
+<div class="error">{{error || '&nbsp;'}}</div>

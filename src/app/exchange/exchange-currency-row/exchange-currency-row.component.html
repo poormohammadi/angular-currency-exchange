@@ -1,0 +1,12 @@
+<div class="container" [ngClass]="{'deposit': type === 'deposit', 'withdraw': type === 'withdraw'}">
+  <div class="balance-container">
+    <app-currency-selector [currency]="selectedCurrency" (currencyChange)="onCurrencyChange($event)">
+    </app-currency-selector>
+
+    <span class="balance-text">
+      Balance: {{selectedCurrency?.symbol}}{{balance}}
+    </span>
+  </div>
+
+  <app-input [value]="amount" [error]="error" [type]="type" (valueChange)="onAmountChange($event)"></app-input>
+</div>

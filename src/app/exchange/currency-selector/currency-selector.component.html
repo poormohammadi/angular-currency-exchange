@@ -1,0 +1,5 @@
+<select [ngModel]="currency" (ngModelChange)="onSelect($event)" [compareWith]="compareOptions">
+  <option *ngFor="let currency of allCurrencies" [ngValue]="currency">
+    {{currency.name}}
+  </option>
+</select>

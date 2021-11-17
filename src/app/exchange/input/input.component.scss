@@ -1,0 +1,27 @@
+.input {
+  outline: none;
+  max-width: 80px;
+  font-size: 21px;
+  border-bottom: 2px dotted grey;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+  background: transparent;
+}
+
+.sign {
+  font-size: 25px;
+  color: lightgray;
+}
+
+.error {
+  color: red;
+  font-size: 11px;
+  margin-top: 8px;
+}
+
+.input-box {
+  display: flex;
+  justify-content: flex-end;
+}
