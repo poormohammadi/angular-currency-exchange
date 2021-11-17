@@ -16,7 +16,7 @@ It shows an error message when the desired exchange amount exceeds the current b
 
 ## Demo
 
-To see the demo, click [here](http://currency-exchange.poormohammmadi.ir/).
+To see the demo, click [here](http://angular-currency-exchange.poormohammmadi.ir/).
 
 `Note : make sure to run it without "https" since it is blocked by api.exchangeratesapi.io.`
 
